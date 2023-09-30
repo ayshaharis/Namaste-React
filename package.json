@@ -1,0 +1,31 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "This is a react course",
+  "main": "App.js",
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/ayshaharis/Namaste-React.git"
+  },
+  "keywords": [],
+  "author": "Aysha Haris A",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayshaharis/Namaste-React/issues"
+  },
+  "homepage": "https://github.com/ayshaharis/Namaste-React#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

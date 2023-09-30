@@ -1,3 +1,97 @@
 CDN -content delivery network
 CDN is a place where react library is hosted.
-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
+
+
+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
+
+
+  <!--How to inject html through js
+    <script>
+        const heading=document.createElement("h1");
+        heading.innerHTML="Hello world from JS";
+        const root=document.getElementById("root");
+        root.appendChild(heading);
+    </script>
+    -->
+
+<!--React CDN links from CDN react-------------
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+-->
+
+
+/* <div id="parent">
+     <div id="child">
+       <h1>
+        I am  an H1 tag
+       </h1>
+       <h2>
+        I am an h2 tag
+       </h2>
+     </div>
+    </div>
+    */
+
+//how to do the above structure of html in Pure react 
+
+const parent=React.createElement("div",{id:"parent"},
+React.createElement("div",{id:"child"},
+[React.createElement("h1",{},"I am an H1 tag"),
+React.createElement("h1",{},"and we are Siblings")]));
+console.log(parent);
+root.render(parent);
+
+//above code is so messy thats hy we use JSX to create HTML
+
+const jsxheading=<h1> This is a  jsx heading </h1>;
+
+here jsxheading is a rect element.which can be rendered inside te render.root();
+Function components:  A function which return React element /JSX is called as a function component 
+calling a component inside another component is called as FUNCTION COMPOSITION IN REACT 
+
+
+const Title =()=>(<h2  id ="title"> This is a title which will be called insied the heading component</h2>);
+
+const Heading =()=>{
+  return <div>
+  <h1>This is headning element insode a functional component</h1>
+  <Title/>;
+  </div>
+};
+
+Above code is an example of function composition 
+
+
+
+
+const heading=React.createElement("h1",{id:"heading",className:"headingclass"},"Hello world from React");
+   // const root=ReactDom.createRoot(document.getElementById("root"));
+   // root.render(heading);
+
+
+//how to do the above structure of html in Pure react 
+
+const parent=React.createElement("div",{id:"parent"},
+React.createElement("div",{id:"child"},
+[React.createElement("h1",{},"I am an H1 tag"),
+React.createElement("h1",{},"and we are Siblings")]));
+console.log(parent);
+//root.render(parent);
+
+
+
+
+
+//above code is so messy thats hy we use JSX to create HTML eleme
+
+
+const JSsxHeading=<h1 id="heading" className="head">This is Heading from jsx</h1>
+const root =ReactDom.createRoot(document.getElementById("root"));
+//root.render(JSsxHeading);
+//console.log(JSsxHeading);
+
+
+Three ways you can call functionalcomponent inside another component
+{Title()} 
+<Title/>
+<Title></Title>

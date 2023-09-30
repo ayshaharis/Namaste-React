@@ -3,3 +3,78 @@
     color:red;
 }
 
+.logo{
+    display: flex;
+    width: 100px;
+    margin: 5px;
+}
+.header{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    background-color: rgb(214, 100, 100);
+    
+    
+}
+
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul >li {
+padding: 15px;
+margin: 10px;
+
+}
+.res-container{
+    
+    width: 200px;
+    margin: 15px;
+    background-color: #f0f0f0;
+}
+.res-container:hover{
+    border: 1px solid #b9abab;
+    cursor: pointer;
+}
+.body{
+    display: flex;
+    margin: 5px;
+    padding: 25px;
+    flex-wrap: wrap;
+
+    
+}
+.resimage{
+   
+    width:180px;
+    
+    padding: 10px;
+}
+
+.reslist-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content{
+   padding: 0 10px;
+    margin: 5px;
+}
+
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+.shimmer-card{
+    width: 200px;
+    height: 400px;
+    margin: 15px;
+    background-color:#f0f0f0;
+}
+.resimage{
+    height: 160px;
+    width: 160px;
+}
