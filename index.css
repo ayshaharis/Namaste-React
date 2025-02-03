@@ -12,7 +12,7 @@
     display: flex;
     border: 1px solid black;
     justify-content: space-between;
-    background-color: rgb(214, 100, 100);
+    background-color: rgb(41, 96, 91);
     
     
 }
@@ -20,7 +20,10 @@
 .nav-items > ul{
     display: flex;
     list-style-type: none;
+    text-decoration: none;
+    color: white;
 }
+
 
 .nav-items > ul >li {
 padding: 15px;
@@ -30,12 +33,15 @@ margin: 10px;
 .res-container{
     
     width: 200px;
+    height: 500px;
     margin: 15px;
     background-color: #f0f0f0;
+    flex-wrap: wrap;
 }
 .res-container:hover{
     border: 1px solid #b9abab;
     cursor: pointer;
+    flex-wrap: wrap;
 }
 .body{
     display: flex;
@@ -77,4 +83,25 @@ margin: 10px;
 .resimage{
     height: 160px;
     width: 160px;
+}
+
+.filter{
+    display: flex;
+}
+
+.filter-btn{
+ 
+    margin: 10px;
+}
+
+
+.top-rated-button{
+    margin: 10px;
+    padding: 0px 10px;
+}
+
+
+.link{
+    text-decoration: none;
+    color: rgb(138, 116, 116);
 }

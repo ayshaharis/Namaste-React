@@ -95,3 +95,12 @@ Three ways you can call functionalcomponent inside another component
 {Title()} 
 <Title/>
 <Title></Title>
+
+
+
+ //conditional rendering 
+    // if(listOfRestaurants.length===0){
+    //     return <ShimmerUI/>;
+    // }
+
+    //Conditional rendering with ternary operator 
