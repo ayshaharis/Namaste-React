@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const RestaurantCard=(props)=>{
   
     const {resData}=props;
-    const {name,cuisines,avgRating,costForTwo,cloudinaryImageId}=resData.info; 
+    const {name,cuisines,avgRating,costForTwo,cloudinaryImageId,id}=resData.info; 
    
     return(
-        <Link to ="/resinfo/:id" className="link">
+    
         <div className="res-container">
         <img src={CDN_URL+cloudinaryImageId}  className="resimage"/>
         <div className="content">
@@ -16,11 +16,12 @@ const RestaurantCard=(props)=>{
         <h3>{cuisines.join(" , ")}</h3>
          <h3>{avgRating}</h3>
          <h3>{costForTwo}</h3>
+         <h3>{id}</h3>
         </div>
        
         </div>
 
-        </Link>
+    
         
     );
 };
