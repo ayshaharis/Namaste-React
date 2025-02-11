@@ -9,9 +9,7 @@ import { MENU_API } from "../utils/constants";
 
 const ResInfo=()=>{
 
-console.log("REACHED RESINFO");
 const {resId}=useParams();
-console.log(resId);
 const [resInfo,setResInfo]=useState(null);
 useEffect(()=>{
  fetchInfo();   
@@ -43,7 +41,7 @@ const {itemCards} =resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[
             
          <ul>
        
-           {itemCards.map((item)=><li>{item.card.info.name} - Rs{item.card.info.price/100}</li>)}
+           {itemCards.map((item)=><li   key={item.card.info.id}>{item.card.info.name} - Rs{item.card.info.price/100}</li>)}
          </ul>
         </div>
     )
