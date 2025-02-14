@@ -155,3 +155,58 @@ const root=ReactDom.createRoot(document.getElementById('root'));
 root.render(<RouterProvider routerr={appRouter}/>)
 
 export default AppLayout;
+
+
+
+
+const About=()=>{
+ 
+   const [userInfo,setUserInfo]=useState(null);
+        useEffect(()=>{fetchData();
+
+        },[])
+          const fetchData=async()=>{
+  const data= await fetch(api);
+   const json=data.json();
+   setUserInfo(json.data);
+          }  
+
+          const{name,location,contact}=json?.data;
+         return(     
+            <div className="about">
+            <h1>{name}</h1>
+            <h3>{contact}</h3>
+            <h3>{location}</h3>
+            </div>
+            );
+   
+
+    
+}export default About;
+
+
+
+class About extends React.Component{
+
+  
+    constructor(props){
+        super(props);
+        console.log("Parent constructor");
+       
+    };
+
+    ComponentDidMount(){
+        console.log("componentdidmountparent");
+    }
+    render(){
+        console.log("parent render");
+       return( <div>
+        <h1>This is About page</h1>
+        <User name={"AYSHA PROPS"} location={"Kozhikode props"}/>
+        <UserClass name={"AYSHA PROPS class"} location={"Kozhikode propsclass"}/>
+    </div>);
+       
+    }
+        
+
+}
