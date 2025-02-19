@@ -34,12 +34,12 @@ const Body=()=>{
     
     return listOfRestaurants.length===0? <ShimmerUI/>:(
         <div className="body">
-            <div className="filter">
-              <div className="search-btn">
-                    <input type="text" className="input-bar" value={searchText} onChange={(e)=>{
+            <div className="flex items-center">
+              <div className="p-2 m-2">
+                    <input type="text" className="border px-4 " value={searchText} onChange={(e)=>{
                     setSearchText(e.target.value);
                     }}/>
-                    <button onClick={()=>{
+                    <button className="filter-btn px-2 bg-amber-200 rounded-lg py-2 mx-2"onClick={()=>{
                      
                        const filteredRestaurant= listOfRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
             
@@ -49,7 +49,7 @@ const Body=()=>{
 
                 <div className="top-rated-button">
 
-                {<button className="filter-btn" onClick={()=>{
+                {<button className="filter-btn px-2 bg-amber-200 rounded-lg py-2" onClick={()=>{
                     const filteredList=listOfRestaurants.filter((res)=>res.info.avgRating>4.4);
                     setFilteredRestaurants(filteredList);
                 }}>Top Rated restaurants</button> }
@@ -60,11 +60,11 @@ const Body=()=>{
             </div>
           
             
-             <div className="reslist-container">
+             <div className="flex ">
              {
               filteredRestaurants.map((restaurant)=> ( 
 
-               <Link 
+               <Link className=" border border-gray-200 shadow shadow-neutral-500 bg-gray-100 m-2 rounded-lg"
                key={restaurant.info.id}
                to={"/restaurants/"+restaurant.info.id}>
 

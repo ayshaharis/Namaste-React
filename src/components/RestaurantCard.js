@@ -9,14 +9,13 @@ const RestaurantCard=(props)=>{
    
     return(
     
-        <div className="res-container">
-        <img src={CDN_URL+cloudinaryImageId}  className="resimage"/>
-        <div className="content">
-        <h2>{name}</h2>
+        <div className="">
+        <img src={CDN_URL+cloudinaryImageId}  className="m-2 px-4 rounded-xl"/>
+        <div className="m-2 p-2">
+        <h2 className="font-bold">{name}</h2>
         <h3>{cuisines.join(" , ")}</h3>
          <h3>{avgRating}</h3>
          <h3>{costForTwo}</h3>
-         <h3>{id}</h3>
         </div>
        
         </div>
