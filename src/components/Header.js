@@ -1,11 +1,15 @@
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
+
 
 const Header=()=>{
   const [logBtn,SetLogBtn]=useState("Login");
   const btn="Logout";
   console.log("header rendered");
+  //useContext is a hook to access the context . avoids props drilling . passing props between components is cumbersome. 
+  const {loggedInUser}=useContext(UserContext);
     return(
       <div className="flex justify-between bg-cyan-900">
         <div className="py-2">
@@ -17,7 +21,8 @@ const Header=()=>{
                 <li><Link to="/about" className="px-2 text-white"> About Us</Link></li>
                 <li><Link to="/contact" className="px-2 text-white">Contact US</Link></li>
                 <li><Link to="/grocery" className="px-2 text-white">Grocery</Link></li>
-                <li><Link className="px-2">cart</Link></li>
+                <li><Link className="px-2  text-white">cart</Link></li>
+                <li><Link className="px-2  text-white">User : {loggedInUser}</Link></li>
             </ul>
             <div>
               <button className="px-2"onClick={()=>{
