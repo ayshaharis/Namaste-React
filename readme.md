@@ -18,4 +18,17 @@ file watching alorithm written in cpp
 -Tree shaking -remove unsed code for you 
 -Differet dev and prodction bundles
 
+
+# setting up testingb env 
+
+-install react testing Library
+-install jest
+-install Babel dependencies
+-configure Babel (in jest websitye using Babel in jest)
+-Create Babel.confi.js in root level and paset the config from jest website
+-configure parcel(to craete .parcelrc file and copy code to dioable default config of bebel inside parcel)
+-jest configuration -npx create jest
+-install jsdom library from Rtl
+-install babel/preset react to make JSx work insode test cases @babel/preset-react
+
  
