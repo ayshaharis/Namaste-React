@@ -31,4 +31,15 @@ file watching alorithm written in cpp
 -install jsdom library from Rtl
 -install babel/preset react to make JSx work insode test cases @babel/preset-react
 
+
+
+# Reduxtootlkit 
+-install dev dependencies. @redux-toolkit and react-redux libraries
+-Build store
+-connect the store to the app
+-Create slice 
+-Dispatch action reducer
+-elector subscribe
+
+
  
